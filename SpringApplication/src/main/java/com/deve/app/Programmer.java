@@ -1,0 +1,35 @@
+package com.deve.app;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+public class Programmer {
+    private int age;
+    private Laptop lap;
+
+    public Programmer(){
+        System.out.println("Object created");
+    }
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        System.out.println("setter called");
+        this.age = age;
+    }
+
+    public Laptop getLap() {
+        return lap;
+    }
+
+    public void setLap(Laptop lap) {
+        this.lap = lap;
+    }
+    public void code(){
+        System.out.println("coding..");
+        lap.compile();
+
+    }
+
+}
